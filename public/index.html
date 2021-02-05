@@ -7,30 +7,75 @@
         <link rel="manifest" href="images/favicon_io/site.webmanifest">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="resize.js"></script>
+
+
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuh4Q-2ajHv8l9QNMWAZlcFyCc8Osf8Ss&callback=initMap">
+        </script>
 
         <title>
-            MediDerm
+            MediDerm - GP and Dermatologist in Plettenberg Bay
         </title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="navbar" id="navb">
 
-                <a class="logo" href="#top">
+        <div class="navbar" id="navb">
+            <div class="covid">
+                For more information on the COVID-19 pandemic please visit:
+                <a class="covidlink" href="https://sacoronavirus.co.za/">www.sacoronavirus.co.za</a>
+            </div>
+                <a class="logo" id="mlogo" href="#top" alt="MediDerm Logo">
                     <img alt="" src="images/logo.jpg"  style="width:30vh;height:8.54vh;">
                 </a>
-
-            <div id="navbuttons" >
+            <div id="menu">
                 <a class="navbutton" href="#about">About</a>
                 <a class="navbutton" href="#find">Where to Find Us</a>
                 <a class="navbutton" href="#contact">Contact Us</a>
             </div>
+            <script src="resize.js" defer></script>
+<!--
+
+
+
+                <div class="dropdown">-->
+<!--                <button onclick="myFunction()" class="dropbtn">-->
+
+<!--                        Menu-->
+<!--                </button>-->
+<!--                <script defer>-->
+
+<!--                    function myFunction() {-->
+<!--                        document.getElementById("myDropdown").classList.toggle("show");-->
+<!--                        document.getElementById("navb").classList.toggle("bigger")-->
+<!--                    }-->
+
+
+<!--                    window.onclick = function(event) {-->
+<!--                        if (!event.target.matches('.dropbtn')) {-->
+<!--                            var dropdowns = document.getElementsByClassName("dropdown-content");-->
+<!--                            var i;-->
+<!--                            for (i = 0; i < dropdowns.length; i++) {-->
+<!--                                var openDropdown = dropdowns[i];-->
+<!--                                if (openDropdown.classList.contains('show')) {-->
+<!--                                    openDropdown.classList.remove('show');-->
+<!--                                    document.getElementById("navb").classList.toggle("bigger")-->
+<!--                                }-->
+<!--                            }-->
+<!--                        }-->
+<!--                    }-->
+<!--                </script>-->
+<!--                <div id="myDropdown" class="dropdown-content">-->
+<!--                    <a href="#about">About</a>-->
+<!--                    <a href="#find">Where to Find Us</a>-->
+<!--                    <a href="#contact">Contact Us</a>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
         <div class="welcome-img" id="top"></div>
         <div class="welcome" >
-            <p class="h1w">Welcome to MediDerm</p>
-            <p class="h2w">Plettenberg Bay's finest medical and dermatological practice</p>
+            <h1 class="h1w">Welcome to MediDerm</h1>
+            <h2 class="h2w">Medical and Dermatological practice in Plettenberg Bay</h2>
         </div>
 
         <h1 class="title" id="about">About</h1>
@@ -38,24 +83,29 @@
         <ul class="info">
             <li class="item">
                 <div class="info-img">
-                    <img src="images/drhart.jpg" class="profile">
+                    <img src="images/drhart.jpg" class="profile" alt="Dr Hartshorne">
                 </div>
                 <div class="info-text">
                 <h3 class="name">Dr Sian Hartshorne</h3>
+                    <p class="qual">MBBCh (Wits), FC Derm (SA), MMed Derm</p>
                 <p class="basic">Dr Hartshorne is our resident Dermatologist.
-                    She will tend to all your skin related needs such as skin cancer treatment and prevention, eczema and acne treatment and mole scans.</p>
+                        She will tend to all your skin related needs such as skin cancer treatment and prevention, eczema and acne treatment and mole scans.</p>
+                    <p class="basic">Dr Hartshorne is also the current president of the SASDS, a board member of the DSSA and AWDS,
+                        is serving on the South African Dermatology Congress Organising Committee for 2020/2021 and serves as an honorary dermatology consultant for the Eden district of the Western Cape
+                    </p>
                 </div>
 
             </li>
 
             <li class="item">
                 <div class="info-img">
-                    <img src="images/drvdh.jpg"  class="profile">
+                    <img src="images/drvdh.jpg"  class="profile" alt="Dr van den Handel">
                 </div>
                 <div class="info-text">
                 <h3 class="name">Dr Theo van den Handel</h3>
+                    <p class="qual">MBBCh (Wits), Dip HIV Man (SA)</p>
                 <p class="basic">Dr van den Handel is our General Practitioner.
-                He will see to you every-day medical needs like annual check-ups and medicals.
+                He will see to your every-day medical needs like annual check-ups and medicals.
                 He is also able to assist with dermatological needs such as mole scans.</p>
                 </div>
 
@@ -76,13 +126,29 @@
         <h1 class="title" id="find" >Where to Find us?</h1>
         <p class="basic">Our street address is: 8 Monks View, 4 Church Street, Plettenberg Bay, 6600.</p>
         <p class="basic">If you're using a GPS the co-ordinates are: -34.053679, 23.371083</p>
-        <p class="basic">Otherwise if you're familiar with Plett take a look at the image below.</p>
-            <img src="images/map.jpg" style="width: 75vw; height: 106.6vw">
+        <p class="basic">Otherwise simply take a look at the map below.</p>
+<!--            <img src="images/map.jpg" style="width: 75vw; height: 106.6vw">-->
+            <div id="map"></div>
+            <script>
+
+                function initMap() {
+
+                    var macc = {lat: -34.053679, lng: 23.371083};
+
+                    var map = new google.maps.Map(
+
+                        document.getElementById('map'), {zoom: 15, center: macc});
+
+                    var marker = new google.maps.Marker({position: macc, map: map});
+
+                }
+
+            </script>
         </div>
 
         <div class="block">
             <h1 class="title" id="contact" >Contact Us</h1>
-            <p class="basic">Contact Antonette or Roczanne via our telephone number: 044 533 3067<br></p>
+            <p class="basic">Contact our receptionists Antonette or Roczanne via our telephone number: 044 533 3067<br></p>
 <!--            <p class="basic">Our receptionists work very hard to make sure everyone can get an appointment that works best for them, however, please be kind and have patience as we can get very busy.</p>-->
         </div>
 

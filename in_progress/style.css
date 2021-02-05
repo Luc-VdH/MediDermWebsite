@@ -1,7 +1,7 @@
 .body{
     background-color: rgb(200, 200, 200);
     margin: 0;
-    font-family: Avenir;
+    font-family: Avenir, "Trebuchet MS", Arial;
     padding: 0;
 }
 .html{
@@ -24,20 +24,21 @@
     display: inline-block;
     color: #000;
     text-align: center;
-    padding-top: 6vh;
+    text-decoration: none;
+    padding-top: 3vh;
     padding-bottom: 6vh;
     padding-right: 3vw;
     padding-left: 2vw;
-
-    font-family: Avenir;
+    display: block;
+    font-family: Avenir, "Trebuchet MS", Arial;
     font-size: 4vh;
 
 
 }
 .logo{
 
-    padding-top: 3.5vh;
-    padding-left: 3.5vh;
+    padding-top: 1.5vh;
+    padding-left: 3vh;
     float: left;
     display: inline-block;
 
@@ -52,7 +53,9 @@
     left: 50%;
     transform: translate(-50%, -40%);
     z-index: 2;
-    width: 100vw;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
     text-align: center;
     overflow: hidden;
     color: rgb(255, 255, 255);
@@ -76,7 +79,7 @@
     position: relative;
 }
 .h1w{
-    font-family: Avenir;
+    font-family: Avenir, "Trebuchet MS", Arial;
     text-align: center;
     font-size: 8vh;
 
@@ -84,9 +87,10 @@
 
 
 .h2w{
-    font-family: Avenir;
+    font-family: Avenir, "Trebuchet MS", Arial;
     text-align: center;
     font-size: 4vh;
+
 
 }
 
@@ -94,7 +98,7 @@
     font-size: 3vh;
     font-weight: 500;
     text-align: center;
-    font-family: Avenir;
+    font-family: Avenir, "Trebuchet MS", Arial;
     width: 40vw;
     margin-left: auto;
     margin-right: auto;
@@ -115,20 +119,20 @@
 
 }
 .title{
-    font-family: Avenir;
+    font-family: Avenir, "Trebuchet MS", Arial;
     text-align: center;
     font-size: 5vh;
 }
 .h2{
-    font-family: Avenir;
+    font-family: Avenir, "Trebuchet MS", Arial;
 }
 .name{
-    font-family: Avenir;
+    font-family: Avenir, "Trebuchet MS", Arial;
     text-align: center;
     font-size: 4.7vh;
 }
 .basic{
-    font-family: Avenir;
+    font-family: Avenir, "Trebuchet MS", Arial;
     text-align: center;
     font-size: 4vh;
 }
@@ -167,18 +171,137 @@ div.block{
 .made-by{
     float:right;
     padding-top: 10vh;
+    padding-bottom: 2vh;
+    font-family: Avenir, "Trebuchet MS", Arial;
 
 }
 .plug{
     color: #000;
     font-size: 3vh;
 }
-.dropbtn{
-    background-image: url("images/reorder-option.svg");
-    float: right;
-    height: 16vh;
-    width: 16vh;
+/*.dropbtn{*/
+/*    background-image: url("images/reorder-option.svg");*/
+/*    float: right;*/
+/*    height: 16vh;*/
+/*    width: 16vh;*/
+/*}*/
+/*.show{*/
+/*    display:block;*/
+/*}*/
+#map{
+    background-color: grey;
+    width: 100%;
+    height: 50vh;
+    position: center;
+    padding: 0;
+
 }
-.show{
-    display:block;
+.covid{
+    background-color: #ffa100;
+    font-family: Avenir, "Trebuchet MS", Arial;
+    text-align: center;
+    font-size: 2vh;
+    padding-bottom: 0;
+}
+.covidlink{
+    text-decoration: none;
+    color: black;
+}
+.qual{
+    font-size: 3vh;
+    font-family: Avenir, "Trebuchet MS", Arial;
+    text-align: center;
+    padding: 0;
+}
+
+/*.dropdown-button {*/
+
+/*    color: white;*/
+/*    padding: 3vh;*/
+/*    height: 10vh;*/
+/*    width: 10vh;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    position: center;*/
+/*}*/
+/*.show {display:block;}*/
+/*.dropdown-items{*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    background-color: #f1f1f1;*/
+/*    min-width: 160px;*/
+/*    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+/*    z-index: 1;*/
+/*}*/
+/*.dropdown{*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    float:right;*/
+/*}*/
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-right: 5vw;
+    padding-left: 2vw;
+    font-size: 4vh;
+    font-family: Avenir, "Trebuchet MS", Arial;
+    border: none;
+    cursor: pointer;
+    /*background-image: url("images/reorder-option.svg");*/
+    /*background-size: cover;*/
+    /*transform: translate(50%, 40%);*/
+}
+
+/* Dropdown button on hover & focus */
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding-right: 2vw;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    float: left;
+    background-color: white;
+    min-width: 100vw;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    z-index: 1;
+    overflow: visible;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 4vh;
+    text-decoration: none;
+    font-family: Avenir, "Trebuchet MS", Arial;
+    font-size: 4vh;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+.bigger{
+    height: 40vh;
+}
+.hamburger{
+    position: center;
+    width: 4vh;
+    height: 4vh;
+    z-index: -1;
 }
